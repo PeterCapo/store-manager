@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>STORE MANAGER</title>
+    <meta name="author" content="Peter Okoth">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import css-->
+    <link type="text/css" rel="stylesheet" href="./assets/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/navigation.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <section class="navigation">
+                        <div class="nav-container">
+                            <div class="brand">
+                                <a href="./index.html">
+                                    <img src="./assets/images/caterer006.png" style="height: 50px; float: left;" alt="Logo"> STORE MANAGER</a>
+                            </div>
+                            <nav>
+                                <div class="nav-mobile">
+                                    <a id="nav-toggle" href="#!">
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <ul class="nav-list">
+                                    <li>
+                                        <a href="./attendants.html">Attendants</a>
+                                    </li>
+                                    <li>
+                                        <a href="./sales.html">Sales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Account</a>
+                                        <ul class="nav-dropdown">
+                                            <li>
+                                                <a href="./products.html">Products</a>
+                                            </li>
+                                            <li>
+                                                <a href="./update_items.html">Add Items</a>
+                                            </li>
+                                            <li>
+                                                <a href="./admin_account.html">Admin Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="./index.html">Sign Out</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+                </div>
+                <div class="row center">
+                    <div class="col col-1-3"></div>
+                    <div class="col col-1-3">
+                        <form class=" center">
+                            <div class="row">
+                                <h2>Add or Modify Item</h2>
+                                <div class="row">
+                                    <div class="input col col-1">
+                                        <input id="name" type="text" placeholder="Name" class="validate">
+                                    </div>
+                                    <div class="input col col-1">
+                                        <input id="category" type="text" placeholder="Category" class="validate">
+                                    </div>
+                                    <div class="input col col-1">
+                                        <input id="price" type="number" name="quantity" min="1" max="30"placeholder="Price" class="validate">
+                                    </div>
+                                    <div class="input col col-1">
+                                    <input id="Quantity" type="number" name="quantity" min="1" max="10"placeholder="Quantity" class="validate"><br>
+                                    </div>
+                                    <div class="input col col-1">
+                                        <input id="thumbnail" type="file" placeholder="Image" class="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                </div>
+                            </div>
+                            <br>
+                        </form>
+                        <div class="input">
+                            <a href="./products.html">
+                                <button>Add Item</button>
+                            </a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="row center">
+                    <h2 id="menu_title">Products</h2>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Beverages</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/ugali_meat.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>El Diablo cognac</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Watches</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/burger.Jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>Smart watches</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Electronics</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/chapati_stew.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>LG Prada laptop</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Electronics</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/githeri.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>PS4</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row center">
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Shoes</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/matumbo.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>Addidas predator</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Music instruments</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/mokimo.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>Violin</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Pets</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/pilau.JPG" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>White bulldog</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-1-4">
+                        <div class="card">
+                            <div class="card_title">
+                                <h3>Toys</h3>
+                                <hr>
+                            </div>
+                            <div class="card_image">
+                                <img src="./assets/images/ugali_fish.jpg" />
+                            </div>
+                            <hr>
+                            <div class="card_content">
+                                <p>Teddy bears</p>
+                                <div class="row">
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button>
+                                                <i class="material-icons">mode_edit</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="col col-1-2">
+                                        <a>
+                                            <button class="danger">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center">
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="footer">
+        <div class="row">
+            <p>© 2018 Copyright STORE MANAGER by Peter Okoth </p>
+        </div>
+    </div>
+</div>
+    <!--Import jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--Import js scripts-->
+    <script type="text/javascript" src="./assets/js/scripts.js"> </script>
+</body>
+
+</html>
