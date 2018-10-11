@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>STORE MANAGER</title>
+    <meta name="author" content="Peter Okoth">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import css-->
+    <link type="text/css" rel="stylesheet" href="./assets/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/navigation.css" />
+</head>
+
+<body>
+    <div class="main-container">
+    <div class="row">
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="./index.html">
+                        <img src="./assets/images/caterer006.png" style="height: 50px; float: left;" alt="Logo"> Store Manager</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!">
+                            <span></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <br>
+    <div class="row wall center">
+        <h2 class="main_title">Store Manager</h2>
+        <p class="main_tagline">Keep calm and count your inventory</p>
+    </div>           
+    <br>
+    <br>
+    <div class="center">
+        <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'" style="height: 50px; width: 10%">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="./update_cart.html">
+    <div class="imgcontainer">
+      <img src="./assets/images/caterer006.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required style="height: 50px; width: 30%">
+      <br>
+      <br>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required style="height: 50px; width: 30%">
+      <br>
+      <br>
+      
+      <button type="submit" style="height: 50px; width: 10%">Login</button>
+      <br>
+      <br>
+
+    </div>
+    <br>
+
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="height: 50px; width: 10%">Cancel</button>
+      <br>
+      <br>
+    </div>
+  </form>
+</div>
+    </div>
+
+</div>
+    <div class="footer">
+        <div class="row">
+            <p>© 2018 Copyright STORE MANAGER by Peter Okoth</p>
+        </div>
+    </div>
+
+        <!-- <div class="row">Icons made by
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </div> -->
+    
+
+
+    <!--Import jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--Import js scripts-->
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    <script type="text/javascript" src="./assets/js/scripts.js"> </script>
+</body>
+
+</html>
