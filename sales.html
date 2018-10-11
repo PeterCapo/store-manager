@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>STORE MANAGER</title>
+    <meta name="author" content="Peter Okoth">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon"  href="assets/images/favicon.ico">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import css-->
+    <link type="text/css" rel="stylesheet" href="./assets/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/navigation.css" />
+</head>
+
+<body>
+    <div class="main-container">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <section class="navigation">
+                    <div class="nav-container">
+                        <div class="brand">
+                            <a href="./index.html">
+                                <img src="./assets/images/caterer006.png" style="height: 50px; float: left;" alt="Logo"> STORE MANAGER</a>
+                        </div>
+                        <nav>
+                            <div class="nav-mobile">
+                                <a id="nav-toggle" href="#!">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <ul class="nav-list">
+                                <li>
+                                    <a href="./attendants.html">Attendants</a>
+                                </li>
+                                <li>
+                                    <a href="./sales.html">Sales</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Account</a>
+                                    <ul class="nav-dropdown">
+                                        <li>
+                                            <a href="./menupage.html">Products</a>
+                                        </li>
+                                        <li>
+                                            <a href="./update_items.html">Add Items</a>
+                                        </li>
+                                        <li>
+                                            <a href="./admin_account.html">My Account</a>
+                                        </li>
+                                        <li>
+                                            <a href="./index.html">Sign Out</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+       
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col col-2-3">
+                    <h2> The sales filtered by specific attendant. </h2>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                             <table id="table_format" class="table table-bordered table-striped table-hover table-list-search">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Category</th>
+                            <th>Item name</th>
+                            <th>Attendant
+                            <select id='filterText' style='display:inline-block' onchange='filterText()'>
+                                <option disabled selected>Select</option>
+                                <option value='James'>James</option>
+                                <option value='Brown'>Brown</option>
+                                <option value='Joseph'>Joseph</option>
+                                <option value='all'>All</option>
+                            </select>
+                            </th>
+                            <th>Price</th>
+                            <th>Balance in Stock</th>
+                            <th>Quantity Sold</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="myTable">
+                        <tr class="content">
+                            <td>1</td>
+                            <td>Electronics</td>
+                            <td>Android Xs watche</td>
+                            <td>Joseph</td>
+                            <td>$5.99</td>
+                            <td>10</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr class="content">
+                            <td>2</td>
+                            <td>Electronics</td>
+                            <td>PS4</td>
+                            <td>Brown</td>
+                            <td>$7.99</td>
+                            <td>10</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="content">
+                            <td>3</td>
+                            <td>Shoes</td>
+                            <td>Addidas predator</td>
+                            <td>James</td>
+                            <td>$0.99</td>
+                            <td>10</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="content">
+                            <td>4</td>
+                            <td>Beverages</td>
+                            <td>El Diablo cognac</td>
+                            <td>Brown</td>
+                            <td>$5.99</td>
+                            <td>10</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="content">
+                            <td>5</td>
+                            <td>Pets</td>
+                            <td>white bulldog</td>
+                            <td>Joseph</td>
+                            <td>$3.99</td>
+                            <td>10</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                        <th>Total Sales Amount:</th>
+                        <td colspan="2">$34.92</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="footer">
+        <div class="row">
+            <p>© 2018 Copyright STORE MANAGER by Peter Okoth</p>  
+        </div>
+    </div>
+</div>
+
+
+    <script>
+function filterText()
+    {  
+        var rex = new RegExp($('#filterText').val());
+        if(rex =="/all/"){clearFilter()}else{
+            $('.content').hide();
+            $('.content').filter(function() {
+            return rex.test($(this).text());
+            }).show();
+    }
+    }
+    
+function clearFilter()
+    {
+        $('.filterText').val('');
+        $('.content').show();
+    }
+</script>
+
+    <!--Import jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--Import js scripts-->
+    <script>
+
+    </script>
+    <script type="text/javascript" src="./assets/js/scripts.js"> </script>
+</body>
+
+</html>
