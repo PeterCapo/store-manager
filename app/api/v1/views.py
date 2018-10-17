@@ -5,16 +5,6 @@ sales = []
 products = []
 
 
-class SpecificSale(Resource):
-    def get(self, id):
-        return make_response(jsonify(
-            {
-                'Status': "OK",
-                'Message': "Success",
-                'specific sale': sales[id]
-            }), 200)
-
-
 class SpecificProduct(Resource):
     def get(self, id):
         return make_response(jsonify(
