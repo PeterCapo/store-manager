@@ -71,4 +71,27 @@ class Sales(Resource):
                 'Message': "Success",
                 'My Sales': sales
             }), 200)
-            
+
+    def post(self):
+        data = request.get_json()
+        id = len(sales) + 1
+        itemName = data['Item Name']
+        attendant = data['Attendant']
+        quantity = data['Quantity']
+        price = data['Price']
+
+        payload = {
+            'id': id,
+            'Item Name': itemName,
+            'Attendant': attendant,
+            'Quantity': quantity,
+            'Price': price
+        }
+        sales.append(payload)
+
+        return make_response(jsonify(
+            {
+                'Message': 'Sales created',
+                'status': 'ok',
+                'Data': sales
+            }), 201)
