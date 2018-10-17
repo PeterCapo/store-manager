@@ -23,3 +23,13 @@ class SpecificProduct(Resource):
                 'Message': "Success",
                 'specific product': products[id]
             }), 200)
+
+
+class Products(Resource):
+    def get(self):
+        return make_response(jsonify(
+            {
+                'Status': "Ok",
+                'Message': "Success",
+                'My Products': products
+            }), 200)
