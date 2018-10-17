@@ -60,3 +60,15 @@ class Products(Resource):
                 'status': 'ok',
                 'Data': products
             }), 201)
+
+
+class Sales(Resource):
+
+    def get(self):
+        return make_response(jsonify(
+            {
+                'Status': "Ok",
+                'Message': "Success",
+                'My Sales': sales
+            }), 200)
+            
