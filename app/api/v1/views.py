@@ -35,6 +35,37 @@ class DeleteProduct(Resource):
         return {'Message': "Not found"}
 
 
+class UpdateProduct(Resource):
+    def put(self, id):
+        data = json.loads(request.data)
+        assert(data['Product Name'])
+        assert(data['Category'])
+        assert(data['Stock Balance'])
+        assert(data['Minimum Inventory'])
+        assert (data['Price'])
+        assert (data['id'])
+
+        for index, product in enumerate(products):
+            if product['id'] == data['id']:
+                new_product = {
+                    "productName": data['Product Name'],
+                    "category": data['Category'],
+                    "stockBalance": data['Stock Balance'],
+                    "minStockBalance": data['Minimum Inventory'],
+                    "price": data['Price'],
+                    "id": data['id']
+                    }
+
+                products[index] = new_product
+
+                return make_response(jsonify(
+                    {
+                        'Message': 'Product updated',
+                        'status': 'ok',
+                        'Data': new_product
+                    }), 200)
+
+
 class Products(Resource):
     def get(self):
         return make_response(jsonify(
