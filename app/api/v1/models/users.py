@@ -7,6 +7,7 @@ class User(object):
         self.username = username
         self.password = password
 
+
 users = [
     User(1, 'username', 'password'),
     User(2, 'user2', 'abcxyz'),
@@ -15,10 +16,12 @@ users = [
 username_table = {u.username: u for u in users}
 userid_table = {u.id: u for u in users}
 
+
 def authenticate(username, password):
     user = username_table.get(username, None)
     if user and safe_str_cmp(user.password, password):
         return user
+
 
 def identity(payload):
     user_id = payload['identity']
