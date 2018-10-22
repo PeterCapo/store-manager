@@ -6,6 +6,7 @@ Store Manager is a web application that helps store owners manage sales and prod
 [![Maintainability](https://api.codeclimate.com/v1/badges/c3d3f3ab02e80bbcce6f/maintainability)](https://codeclimate.com/github/PeterCapo/store-manager/maintainability)
 
 #Heroku Link
+
 https://store-managerv1.herokuapp.com/
 
 # Installation and Setup
