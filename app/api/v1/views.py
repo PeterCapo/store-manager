@@ -8,31 +8,37 @@ from app.api.v1.models.sales import *
 
 class SpecificSale(Resource):
     def get(self, id):
-        return make_response(jsonify(
-            {
-                'Status': "OK",
-                'Message': "Success",
-                'specific sale': sales[id]
-            }), 200)
+        for sale in sales:
+            if id == sale['id']:
+                return make_response(jsonify(
+                    {
+                        'Message': 'Specific sale',
+                        'status': 'ok',
+                        'Data': sale
+                    }), 200)
 
 
 class SpecificProduct(Resource):
     def get(self, id):
-        return make_response(jsonify(
-            {
-                'Status': "OK",
-                'Message': "Success",
-                'specific product': products[id]
-            }), 200)
+        for product in products:
+            if id == product['id']:
+                return make_response(jsonify(
+                    {
+                        'Message': 'Specific product',
+                        'status': 'ok',
+                        'Data': product
+                    }), 200)
 
-
-class DeleteProduct(Resource):
     def delete(self, id):
-        product = products[id]
-        if product:
-            products.remove(product)
-            return {'Message': "Deleted"},
-        return {'Message': "Not found"}
+        for product in products:
+            if id == product['id']:
+                products.remove(product)
+            return make_response(jsonify(
+                {
+                    'Message': 'Deleted',
+                    'status': 'ok',
+                }), 200)
+        return{'Message': "Not Found"}
 
 
 class UpdateProduct(Resource):
@@ -85,7 +91,7 @@ class Products(Resource):
         price = data['Price']
 
         if not Validators().valid_product_name(productName):
-            return {'message': 'Enter a valid product name'}, 400
+            return {'Message': 'Enter a valid product name'}, 400
 
         payload = {
             'id': id,
