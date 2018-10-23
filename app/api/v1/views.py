@@ -3,7 +3,7 @@ import json
 from flask import jsonify, make_response, request
 from app.api.v1.models.products import *
 from app.api.v1.validators.utils import Validators
-sales = []
+from app.api.v1.models.sales import *
 
 
 class SpecificSale(Resource):
@@ -140,7 +140,7 @@ class Sales(Resource):
                     'product id': productId
                     }
         sales.append(payload)
-        product['Stock Balance'] -= 1
+        product['Stock Balance'] -= quantity
 
         return make_response(jsonify(
             {

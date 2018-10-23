@@ -14,7 +14,8 @@ class TestSales(unittest.TestCase):
             "Item Name": "Infinix",
             "Attendant": "James",
             "Quantity": 2,
-            "Price": 20000
+            "Price": 20000,
+            "product id": 1
             }
         res = self.client.post(
             '/api/v1/sales',
@@ -31,7 +32,8 @@ class TestSales(unittest.TestCase):
             "Item Name": "",
             "Attendant": "James",
             "Quantity": 2,
-            "Price": 20000
+            "Price": 20000,
+            "product id": 1
             }
         res = self.client.post(
             '/api/v1/sales',
